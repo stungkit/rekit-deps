@@ -1,0 +1,22 @@
+{
+  "name": "rekit-deps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "update.2.0.x.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supnate/rekit-deps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supnate/rekit-deps/issues"
+  },
+  "homepage": "https://github.com/supnate/rekit-deps#readme",
+  "dependencies": {
+    "json-stable-stringify": "^1.0.1"
+  }
+}

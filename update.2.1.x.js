@@ -1,5 +1,7 @@
 'use strict';
 
+var stringify = require('json-stable-stringify');
+
 // Update the deps version from rekit repo
 // rekit repo is supposed to be have up-to-date versions.
 // ensure rekit repo is in the same folder with rekit-deps
@@ -33,7 +35,12 @@ for (let p in deps.devDependencies) {
   }
 }
 
-fs.writeFileSync(depsFile, JSON.stringify(deps, null, '  '));
+fs.writeFileSync(depsFile, stringify(deps, { space: '  ' }));
+
+const notInDep = {};
+for (let p in vers) {
+  if (!deps.devDependencies[p]) console.log(`NOT in dep: ${p}`);
+}
 
 if (updated === 0) console.log('It\'s already up to date.');
 else console.log(`${updated} dependencies updated.`);
